@@ -1,0 +1,56 @@
+<section class="search-container">
+    <div class="empty-box"></div>
+    <div id="search-box" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Item...">
+        <span onclick="newElement()" class="searchBtn">Search</span>
+    </div>
+
+    <div class="search-list">
+        <table id="myTable" class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price(rs)</th>
+                    <th scope="col">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Ajwan</td>
+                    <td>25</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Heeng</td>
+                    <td>23</td>
+                    <td>1%</td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Red Chilli</td>
+                    <td>2%</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- pagination -->
+    <div class="center">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+</section>

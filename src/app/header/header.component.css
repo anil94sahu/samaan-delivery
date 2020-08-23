@@ -1,0 +1,36 @@
+* {
+    background: #EAE7DC no-repeat right top;
+}
+
+ul>li {
+    display: inline-block;
+    background-color: #8E8D8A;
+}
+
+ul>li:hover {
+    background-color: #D8C3A5;
+}
+
+.center {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.center .nav {
+    display: inline-block;
+    background-size: 100% 200%;
+}
+
+.header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    padding: 20px;
+    ;
+}
+
+.header {
+    width: 99%
+}

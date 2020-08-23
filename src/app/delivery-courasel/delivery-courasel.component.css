@@ -1,0 +1,35 @@
+#demo img {
+    width: 100%;
+    height: 800px;
+}
+
+#demo+.iframe {
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background: #ffffff url("../../assets/images/delivery-courasel/background-image.png") no-repeat right top;
+}
+
+.iframe iframe {
+    height: 500px;
+    width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+    #demo+.iframe {
+        position: relative;
+        display: block;
+        height: inherit;
+        top: 0px;
+        left: 0px;
+        transform: translate(0%, 0%);
+        ;
+        ;
+    }
+    .iframe iframe {
+        position: relative;
+        height: 500px;
+    }
+}

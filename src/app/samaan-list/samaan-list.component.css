@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+.search-container {
+    background: #ffffff url("../../assets/images/samaan-list/back.png") no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 100px;
+    ;
+}
+
+
+/* Style the header */
+
+.header {
+    background-color: #D8C3A5;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.empty-box {
+    height: 100px;
+    ;
+}
+
+
+/* Clear floats after the header */
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Style the input */
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+
+/* Style the "Add" button */
+
+.searchBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.searchBtn:hover {
+    background-color: #bbb;
+}
+
+.search-list {
+    width: 100%;
+}
+
+#myTable {
+    background: #ffffff url("https://lh3.googleusercontent.com/proxy/n8IJeywaAnoGCYaD3rdUlkrGM5lG487nCUCUcTnrZT5wdlyENSF2oO_K0-PF-y6TUYPzL-WfCW18_HzuNxpguox96pdNMTP1XkXFXLU") top;
+    width: 80%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#myTable tr,
+td,
+th {
+    border: 1px solid #ddd;
+}
+
+#myTable tr th {
+    background-color: #E98074;
+    font-family: Georgia, serif;
+}
+
+#myTable tbody tr:hover {
+    background-color: #E85A4F;
+}
+
+@media only screen and (max-width: 600px) {
+    .search-container .header {
+        background-color: #D8C3A5;
+        color: white;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        margin-top: 0px;
+    }
+}
+
+
+/* pagination */
+
+.center {
+    text-align: center;
+}
+
+.pagination {
+    padding: 2% 0px;
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #8E8D8A;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #D8C3A5;
+    color: #EAE7DC;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
