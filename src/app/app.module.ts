@@ -8,7 +8,9 @@ import { DeliveryCouraselComponent } from './delivery-courasel/delivery-courasel
 import { SamaanListComponent } from './samaan-list/samaan-list.component';
 import { CustomerRatingComponent } from './customer-rating/customer-rating.component';
 import { SamaanFooterComponent } from './samaan-footer/samaan-footer.component';
-
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { FilterPipe } from './services/filter.pipe';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +18,16 @@ import { SamaanFooterComponent } from './samaan-footer/samaan-footer.component';
     DeliveryCouraselComponent,
     SamaanListComponent,
     CustomerRatingComponent,
-    SamaanFooterComponent
+    SamaanFooterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

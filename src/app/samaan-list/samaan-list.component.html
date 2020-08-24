@@ -2,7 +2,7 @@
     <div class="empty-box"></div>
     <div id="search-box" class="header">
         <h2>My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Item...">
+        <input type="text" id="myInput" placeholder="Item..." [(ngModel)]="query">
         <span onclick="newElement()" class="searchBtn">Search</span>
     </div>
 
@@ -11,30 +11,21 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Item Name</th>
+                    <th scope="col">Item Name(English & Hindi)</th>
                     <th scope="col">Price(rs)</th>
                     <th scope="col">Discount</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td>Ajwan</td>
+                <tr *ngFor="let item of itemListSheet | filter : query | slice:0:10; let i = index">
+                    <td scope="row">{{i + 1}}</td>
+                    <td>{{item["Item Name"] }}
+                        <pre>{{'( '+ item["Item Name(Hindi)"] + ')'}}</pre>
+                    </td>
                     <td>25</td>
                     <td>10%</td>
                 </tr>
-                <tr>
-                    <td scope="row">2</td>
-                    <td>Heeng</td>
-                    <td>23</td>
-                    <td>1%</td>
-                </tr>
-                <tr>
-                    <td scope="row">3</td>
-                    <td>Red Chilli</td>
-                    <td>2%</td>
-                    <td>100</td>
-                </tr>
+
             </tbody>
         </table>
     </div>

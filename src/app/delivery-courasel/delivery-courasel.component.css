@@ -9,7 +9,12 @@
     top: 50%;
     left: 80%;
     transform: translate(-50%, -50%);
-    background: #ffffff url("../../assets/images/delivery-courasel/background-image.png") no-repeat right top;
+    background: black no-repeat right top;
+    opacity: 1;
+}
+
+.iframe {
+    opacity: 1;
 }
 
 .iframe iframe {
