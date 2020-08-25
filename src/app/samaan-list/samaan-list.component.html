@@ -1,9 +1,9 @@
 <section class="search-container">
     <div class="empty-box"></div>
     <div id="search-box" class="header">
-        <h2>My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Item..." [(ngModel)]="query">
-        <span onclick="newElement()" class="searchBtn">Search</span>
+        <h2>Search Item</h2>
+        <input type="text" id="myInput" (input)="searchItem(itemListSheet, query)" placeholder="Item..." [(ngModel)]="query">
+        <span onclick="searchItem(itemListSheet, query)" class="searchBtn">Search</span>
     </div>
 
     <div class="search-list">
@@ -13,17 +13,15 @@
                     <th scope="col">#</th>
                     <th scope="col">Item Name(English & Hindi)</th>
                     <th scope="col">Price(rs)</th>
-                    <th scope="col">Discount</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of itemListSheet | filter : query | slice:0:10; let i = index">
+                <tr *ngFor="let item of currentSheet | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
                     <td scope="row">{{i + 1}}</td>
                     <td>{{item["Item Name"] }}
                         <pre>{{'( '+ item["Item Name(Hindi)"] + ')'}}</pre>
                     </td>
-                    <td>25</td>
-                    <td>10%</td>
+                    <td>{{item["Price"]+'/'+item["Unit"]}}</td>
                 </tr>
 
             </tbody>
@@ -33,15 +31,9 @@
     <!-- pagination -->
     <div class="center">
         <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#" class="active">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
         </div>
     </div>
+
 
 </section>

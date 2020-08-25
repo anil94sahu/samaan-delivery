@@ -11,6 +11,7 @@ import { SamaanFooterComponent } from './samaan-footer/samaan-footer.component';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { FilterPipe } from './services/filter.pipe';
 import {FormsModule} from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxPaginationModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

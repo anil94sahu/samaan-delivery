@@ -76,13 +76,14 @@ input {
 }
 
 #myTable {
-    background: #ffffff url("https://lh3.googleusercontent.com/proxy/n8IJeywaAnoGCYaD3rdUlkrGM5lG487nCUCUcTnrZT5wdlyENSF2oO_K0-PF-y6TUYPzL-WfCW18_HzuNxpguox96pdNMTP1XkXFXLU") top;
+    background: #ffffff url("../../assets/images/samaan-list/gradient-color.jpg") top;
     width: 80%;
     border: 1px solid #ddd;
     font-size: 18px;
     margin: auto;
     text-align: center;
     margin-top: 100px;
+    outline: 2px solid #ddd;
 }
 
 #myTable th,
@@ -94,16 +95,18 @@ input {
 #myTable tr,
 td,
 th {
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
 }
 
 #myTable tr th {
-    background-color: #E98074;
+    background-color: #EAE7DC;
     font-family: Georgia, serif;
+    font-size: 25px;
+    ;
 }
 
 #myTable tbody tr:hover {
-    background-color: #E85A4F;
+    background-color: #EAE7DC;
 }
 
 @media only screen and (max-width: 600px) {
@@ -147,4 +150,10 @@ th {
 
 .pagination a:hover:not(.active) {
     background-color: #ddd;
+}
+
+.ngx-pagination .current {
+    background-color: #D8C3A5 !important;
+    color: #EAE7DC;
+    border: 1px solid #4CAF50 !important;
 }

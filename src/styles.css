@@ -4,5 +4,9 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 * {
     font: italic small-caps bold 30px Georgia, serif;
-    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Dancing Script', cursive; */
+}
+
+.ngx-pagination {
+    background-color: #EAE7DC !important;
 }

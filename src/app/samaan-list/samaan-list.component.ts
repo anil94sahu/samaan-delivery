@@ -8,6 +8,8 @@ import { GoogleSheetService } from '../services/google-sheet.service';
 })
 export class SamaanListComponent implements OnInit {
   itemListSheet = [];
+  currentSheet = [];
+  p = 1;
   query = '';
 
   constructor(private gsService: GoogleSheetService) { }
@@ -16,10 +18,20 @@ export class SamaanListComponent implements OnInit {
     this.gsService.getItemListSheet()
     .subscribe(((itemListSheet: any) => {
       this.itemListSheet = itemListSheet;
+      this.currentSheet = [...this.itemListSheet];
     }
       ), err => {
 
       });
   }
 
+  searchItem(value: any[], term: string){
+    this.p = 1;
+    if (term) {
+      this.currentSheet = value.filter((x: any) => x['Item Name'].toLowerCase().startsWith(term.toLowerCase()));
+    } else {
+      this.currentSheet = value;
+    }
+
+  }
 }

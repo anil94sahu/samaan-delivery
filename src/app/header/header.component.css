@@ -22,15 +22,16 @@ ul>li:hover {
     background-size: 100% 200%;
 }
 
-.header img {
+.header .company-logo img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
-    padding: 20px;
-    ;
 }
 
 .header {
     width: 99%
+}
+
+.whatsapp-size {
+    height: 64px;
 }

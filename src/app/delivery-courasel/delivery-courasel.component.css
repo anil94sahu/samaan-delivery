@@ -4,12 +4,13 @@
 }
 
 #demo+.iframe {
-    height: 500px;
+    /* height: 500px; */
     position: absolute;
     top: 50%;
     left: 80%;
     transform: translate(-50%, -50%);
-    background: black no-repeat right top;
+    background: #EAE7DC;
+    border: 3px solid rgba(0, 0, 0, 0.2);
     opacity: 1;
 }
 
