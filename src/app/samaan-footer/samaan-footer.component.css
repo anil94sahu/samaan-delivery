@@ -32,10 +32,23 @@ ul li:hover {
     background-size: 100% 200%;
 }
 
-.header img {
+.whatsapp-size {
+    height: 35px;
+}
+
+.mobile {
+    background-color: transparent;
+    outline: 3px dashed black;
+}
+
+.header .company-logo .logo-resize {
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 200px;
     padding: 20px;
+}
+
+.header {
+    width: 99%
 }

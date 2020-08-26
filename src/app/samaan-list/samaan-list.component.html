@@ -15,7 +15,7 @@
                     <th scope="col">Price(rs)</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody *ngIf="currentSheet.length > 1;else norecord">
                 <tr *ngFor="let item of currentSheet | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
                     <td scope="row">{{i + 1}}</td>
                     <td>{{item["Item Name"] }}
@@ -25,6 +25,13 @@
                 </tr>
 
             </tbody>
+            <ng-template>
+                <tbody #norecord>
+                    <tr class="text-center">
+                        No Record Found.
+                    </tr>
+                </tbody>
+            </ng-template>
         </table>
     </div>
 
