@@ -9,4 +9,5 @@
 
 .ngx-pagination {
     background-color: #EAE7DC !important;
+    padding-left: 0px;
 }

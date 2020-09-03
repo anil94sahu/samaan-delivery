@@ -105,13 +105,23 @@
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .side,
     .middle {
         width: 100%;
     }
     .right {
         display: none;
+    }
+    [class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+        padding: 10%;
+        border: 2px solid #EAE7DC;
+        border-collapse: collapse;
+    }
+    .customer-rating .rating-profile {
+        width: 100% !important;
     }
 }
 

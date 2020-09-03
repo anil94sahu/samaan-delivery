@@ -47,8 +47,46 @@ ul li:hover {
     margin-right: auto;
     height: 200px;
     padding: 20px;
+    width: 50%;
 }
 
 .header {
     width: 99%
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+        ;
+    }
+    .ml-5 {
+        margin-left: 0px !important;
+    }
+    .row {
+        display: table;
+    }
+    ul>li {
+        display: block !important;
+        width: 100%;
+        background-color: #eae7dc;
+    }
+    .pl-0 {
+        padding-left: 0px;
+    }
+    .header .company-logo .logo-resize {
+        width: 100%;
+    }
+    footer a {
+        background-color: #EAE7DC;
+        font-style: normal;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+        opacity: 0.5;
+        font-size: 16px;
+    }
+    p.copyright {
+        background-color: lightgrey !important;
+    }
 }
